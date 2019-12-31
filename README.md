@@ -22,9 +22,9 @@ Note that running the commands below **will** delete any existing alias
 file you may have had:
 
 ```
-$ git clone https://github.com/awslabs/awscli-aliases.git
+$ git clone https://github.com/faizanbashir/awscli-aliases.git
 $ mkdir -p ~/.aws/cli
-$ cp awscli-aliases/alias ~/.aws/cli/alias
+$ mv awscli-aliases/alias ~/.aws/cli/alias
 ```
 
 To test that the aliases now work, run the following alias:
@@ -40,6 +40,16 @@ command:
     "UserId": "AIUAINBADX2VEG2TC6HD6",
     "Arn": "arn:aws:iam::012345678901:user/myuser"
 }
+```
+
+List all EC2 Instances across all regions:
+```
+aws list-instances
+```
+
+List all EC2 Instances in ``us``:
+```
+aws list-instances 'us'
 ```
 
 ## Dependencies
